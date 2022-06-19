@@ -28,7 +28,8 @@ int main() {
 
 
 //User function Template for C++
-
+//O(S)
+//O(1)
 string reverseWord(string str){
     
   //Your code here
