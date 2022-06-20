@@ -17,7 +17,6 @@ public:
             {
                 if(arr[i] != arr[arr[i]-1])
                     swap(arr[i], arr[arr[i] - 1]);
-                else i++;
             }
         }
         for(i = 0; i<n; i++)
