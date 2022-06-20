@@ -1,3 +1,5 @@
+//O(N)
+//O(1)
 class Solution {
 public:
     vector<int> productExceptSelf(vector<int>& nums) {
