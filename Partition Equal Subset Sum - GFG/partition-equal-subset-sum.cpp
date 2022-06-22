@@ -35,7 +35,7 @@ public:
         {
             for(int j = 1; j<= sum; j++)
             {
-                if(arr[i-1] <= sum)
+                if(arr[i-1] <= j)
                 {
                     dp[i][j] = dp[i-1][j-arr[i-1]] || dp[i-1][j];
                 }
