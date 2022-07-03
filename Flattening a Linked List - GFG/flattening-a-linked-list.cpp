@@ -132,13 +132,10 @@ Node * merge(Node* root1, Node* root2)
     the flattened linked list. */
 Node *flatten(Node *root)
 {
-    Node *ans = root;
-    Node* ptr = root->next;
-    while(ptr != NULL)
-    {
-        ans = merge(ans, ptr);
-        ptr = ptr->next;
-    }
-    return ans;
+    if(root == NULL || root->next == NULL)
+        return root;
+    root->next = flatten(root->next);
+    root = merge(root, root->next);
+    return root;
 }
 
