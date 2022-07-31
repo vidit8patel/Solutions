@@ -17,13 +17,11 @@ public:
         {
             if(dict.count(sub += s[i]))
             {
-                if(dp[i+1] == -1) 
-                    dp[i+1] = solve(s, dict, i+1);
-                if(dp[i+1] == true)
-                    return true;
+                if(solve(s, dict, i+1))
+                    return dp[index] = true;
             }
         }
-        return false;
+        return dp[index] = false;
     }
 };
 
