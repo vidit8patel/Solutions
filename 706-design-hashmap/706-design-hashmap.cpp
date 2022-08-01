@@ -2,14 +2,13 @@ class MyHashMap {
 public:
     vector<list<pair<int, int>>> map;
     int size;
-    int mult = 7;
     MyHashMap() {
         size = 1e6+1;       
         map.resize(size);
     }
     int hash(int key)
     {
-        return key*mult%size;
+        return key%size;
     }
     list<pair<int, int>> :: iterator search(int key)
     {
